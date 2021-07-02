@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/receiverProfileImg"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        tools:src="@drawable/profile_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/messageLyt"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_receive_bg"
+        android:layout_marginStart="5dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@id/receiverProfileImg"
+        app:layout_constraintTop_toTopOf="parent"
+>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/messageImgCv"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="5dp"
+            android:visibility="gone"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/messageImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_avatar"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/receiveMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="200dp"
+            android:minWidth="80dp"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/colorText"
+            android:text="Text View Text View Text View Text ViewText ViewText ViewText ViewText ViewText ViewText ViewText View"
+
+            />
+        <TextView
+            android:id="@+id/messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/receiveMessage"
+            android:text="4.00 PM"
+            android:textColor="@color/colorText"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="end"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/feeling"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/messageLyt"
+        app:layout_constraintEnd_toEndOf="@+id/messageLyt"
+        app:layout_constraintStart_toEndOf="@+id/messageLyt"
+        app:layout_constraintTop_toTopOf="@+id/messageLyt"
+        app:srcCompat="@drawable/ic_fb_love" />
+</androidx.constraintlayout.widget.ConstraintLayout>

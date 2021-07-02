@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.pgreze:android-reactions:1.5.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b08b86a427f4a7baa1b49b382fa7256b/jetified-android-reactions-1.5.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b08b86a427f4a7baa1b49b382fa7256b/jetified-android-reactions-1.5.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b08b86a427f4a7baa1b49b382fa7256b/jetified-android-reactions-1.5.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.pgreze/android-reactions/1.5.1/d1917689a83177f999edf1a40a9cf59589d2c699/android-reactions-1.5.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

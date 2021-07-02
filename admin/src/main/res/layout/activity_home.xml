@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    tools:context=".activity.HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolBar"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_height="?attr/actionBarSize">
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usersCardLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp"
+            android:layout_margin="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/product_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_users"
+                    android:scaleType="centerCrop"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/textSecondary"
+                    android:layout_margin="5dp"
+                    />
+                <TextView
+                    android:id="@+id/prodcut_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_toEndOf="@id/product_image"
+                    android:layout_toStartOf="@id/removeFromCart"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textSize="16sp"
+                    android:text="View All Users"
+                    android:textColor="@color/colorText"
+                    />
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/removeFromCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="More Details"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/reportCardLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp"
+            android:layout_margin="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/reportImg"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_report"
+                    android:scaleType="centerCrop"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/textSecondary"
+                    android:layout_margin="5dp"
+                    />
+                <TextView
+                    android:id="@+id/reportText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_toEndOf="@id/reportImg"
+                    android:layout_toStartOf="@id/reportArrow"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textSize="16sp"
+                    android:text="View User Reports"
+                    android:textColor="@color/colorText"
+                    />
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/reportArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="More Details"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:id="@+id/navigationView"
+        android:background="?attr/colorPrimary"
+        app:itemTextColor="#fff"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start"
+        android:layout_height="match_parent">
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

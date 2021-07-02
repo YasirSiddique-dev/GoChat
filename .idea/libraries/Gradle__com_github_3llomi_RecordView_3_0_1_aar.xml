@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.3llomi:RecordView:3.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e6545855ff4e04b2c7993fe1bcb38307/jetified-RecordView-3.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e6545855ff4e04b2c7993fe1bcb38307/jetified-RecordView-3.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e6545855ff4e04b2c7993fe1bcb38307/jetified-RecordView-3.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.3llomi/RecordView/3.0.1/945817e348c90140c874947f9b840cd731f43013/RecordView-3.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

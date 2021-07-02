@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="Spam Detection">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="Spam Detection"
+            android:key="spam_detection"
+            android:summaryOn="Activated"
+            android:summaryOff="Deactivated">//key is just like id
+
+        </SwitchPreference>
+
+    </PreferenceCategory>
+
+
+
+</androidx.preference.PreferenceScreen>

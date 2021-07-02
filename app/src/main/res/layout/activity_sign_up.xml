@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.SignUpActivity"
+    >
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        android:layout_below="@id/logo"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:id="@+id/sign_up_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sign_up_fullname_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_below="@id/sign_up_text"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="32dp"
+                    android:hint="Full Name"
+                    app:endIconMode="clear_text"
+                    >
+                    <!--this is the actual edit text which takes the input-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sign_up_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_style"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:ems="8"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sign_up_email_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_below="@id/sign_up_fullname_lyt"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="32dp"
+                    android:hint="Email Address"
+                    app:endIconMode="clear_text"
+
+                    >
+                    <!--this is the actual edit text which takes the input-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sign_up_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_style"
+                        android:singleLine="true"
+                        android:inputType="textEmailAddress"
+                        android:ems="8"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sign_up_password_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_below="@id/sign_up_email_lyt"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="32dp"
+                    android:hint="Password"
+                    app:endIconMode="password_toggle"
+                    >
+                    <!--this is the actual edit text which takes the input-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sign_up_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_style"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:ems="5"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sign_up_phone_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_below="@id/sign_up_password_lyt"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="32dp"
+                    android:hint="Phone Number"
+                    app:endIconMode="clear_text"
+                    >
+                    <!--this is the actual edit text which takes the input-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sign_up_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_style"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:ems="5"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/signup_btn"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/sign_up_phone_lyt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+                <ProgressBar
+                    android:id="@+id/progress_circular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sign_up_phone_lyt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:layout_below="@id/main_card"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorAccent"
+        app:cornerRadius="15dp"
+        android:layout_marginBottom="20dp"
+        />
+</RelativeLayout>

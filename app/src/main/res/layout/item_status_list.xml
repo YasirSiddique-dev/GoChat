@@ -1,0 +1,84 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/status_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toRightOf="@id/image_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="username"
+            android:textStyle="bold"
+            android:textSize="16dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Click to View Status"
+            android:textSize="16dp"
+            android:layout_below="@id/tv1"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="10dp"
+        app:tint="@color/colorText"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:padding="6dp"
+            android:src="@mipmap/ic_launcher" />
+
+
+        <com.devlomi.circularstatusview.CircularStatusView
+            android:id="@+id/circular_status_view"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            app:portion_color="@color/colorAccent"
+            app:portion_spacing="4dp"
+            app:portion_width="2dp"
+            app:portions_count="1" />
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

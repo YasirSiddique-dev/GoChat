@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/colorLightGrey">
+
+
+    <TextView
+        android:id="@+id/updateTv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Your Name"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/updateTv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Field must not be empty"
+        android:gravity="center"
+        android:textStyle="normal"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        android:layout_below="@id/updateTv1"
+        android:layout_centerHorizontal="true"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameLyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:endIconMode="clear_text"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeColor="@color/white"
+        app:boxBackgroundColor="@color/white"
+        android:layout_below="@id/updateTv2"
+        android:layout_centerHorizontal="true"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/field_bg"
+            android:hint="Name"
+            android:inputType="text"
+            android:maxLines="1"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/nameLyt"
+        android:layout_centerHorizontal="true"
+        >
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/update"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:text="Update"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:text="Cancel"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

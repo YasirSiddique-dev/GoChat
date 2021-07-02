@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ReportDetailsActivity"
+   >
+
+    <TextView
+        android:id="@+id/reportedBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reported By"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp"
+        android:textColor="@color/colorText"
+        android:layout_margin="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@id/usersCardLyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="5dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/reportedBy">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/report_by_user_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_user"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/textSecondary"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/report_by_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_toEndOf="@id/report_by_user_image"
+                android:layout_alignParentEnd="true"
+                android:gravity="start"
+                android:textSize="16sp"
+                android:text="Username"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorText"
+                android:paddingStart="20dp"
+                />
+
+            <TextView
+                android:id="@+id/report_by_user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_toEndOf="@id/report_by_user_image"
+                android:layout_alignParentEnd="true"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:text="email@gmail.com"
+                android:textColor="@color/textSecondary"
+                android:paddingStart="20dp"
+                android:layout_below="@id/report_by_user_name"
+                />
+
+            <TextView
+                android:id="@+id/report_by_user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_toEndOf="@id/report_by_user_image"
+                android:layout_alignParentEnd="true"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:text="03001231231"
+                android:textColor="@color/textSecondary"
+                android:paddingStart="20dp"
+                android:layout_below="@id/report_by_user_email"
+                />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/reportedTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reported To"
+        android:layout_below="@id/usersCardLyt"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp"
+        android:textColor="@color/colorText"
+        android:layout_margin="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/report_to_card_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="5dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/reportedTo">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/report_to_user_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_user"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/textSecondary"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/report_to_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_toEndOf="@id/report_to_user_image"
+                android:layout_alignParentEnd="true"
+                android:gravity="start"
+                android:textSize="16sp"
+                android:text="Username"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorText"
+                android:paddingStart="20dp"
+                />
+
+            <TextView
+                android:id="@+id/report_to_user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_toEndOf="@id/report_to_user_image"
+                android:layout_alignParentEnd="true"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:text="email@gmail.com"
+                android:textColor="@color/textSecondary"
+                android:paddingStart="20dp"
+                android:layout_below="@id/report_to_user_name"
+                />
+
+            <TextView
+                android:id="@+id/reported_to_user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_toEndOf="@id/report_to_user_image"
+                android:layout_alignParentEnd="true"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:text="03001231231"
+                android:textColor="@color/textSecondary"
+                android:paddingStart="20dp"
+                android:layout_below="@id/report_to_user_email"
+                />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/forText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For (Reason)"
+        android:layout_below="@id/report_to_card_lyt"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp"
+        android:textColor="@color/colorText"
+        android:layout_margin="10dp"/>
+
+
+    <TextView
+        android:id="@+id/reportReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@id/forText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorText"
+        android:layout_margin="10dp"/>
+
+
+</RelativeLayout>

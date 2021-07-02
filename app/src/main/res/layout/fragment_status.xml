@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.StatusFragment"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/addStatusBtn"
+        android:background="?selectableItemBackground">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/plus_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_status_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap to Add Status"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toEndOf="@+id/plus_icon"
+            app:layout_constraintTop_toTopOf="@+id/plus_icon"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/add_status_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="your status will appear here.."
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/add_status_txt"
+            app:layout_constraintTop_toBottomOf="@+id/add_status_txt" />
+
+        <TextView
+            android:id="@+id/msgTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorLightGrey"
+        android:text="Recent Updates"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@id/addStatusBtn"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/status_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@id/view4"
+        />
+
+</RelativeLayout>
